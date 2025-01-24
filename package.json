@@ -1,0 +1,73 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "Web panel for users to interact and manage their game server.",
+  "version": "0.1.0",
+  "author": "Ryan Leach <ryan.leach@gamingvalhalla.com>",
+  "bin": {
+    "translate-files": "./localization/file-translation.js",
+    "extract-pages": "./localization/page-extraction.js",
+    "extract-components": "./localization/component-extraction.js"
+  },
+  "dependencies": {
+    "@adyen/adyen-web": "^5.68.1",
+    "anime": "^0.1.2",
+    "animejs": "^3.2.2",
+    "cheerio": "^1.0.0",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.7",
+    "gatsby": "^5.13.5",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-cloudflare-pages": "^1.0.3",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-remark-images": "^7.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-wordpress": "^7.13.4",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "glob": "^10.3.10",
+    "gsap": "^3.12.5",
+    "html-react-parser": "^5.1.12",
+    "immutable": "^4.3.7",
+    "react": "^18.2.0",
+    "react-cookie": "^7.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^20.19.1",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "translate": "ts-node localization/file-translation.ts files",
+    "extract:pages": "ts-node localization/page-extraction.ts extract",
+    "restore:pages": "ts-node localization/page-extraction.ts restore",
+    "extract:components": "ts-node localization/component-extraction.ts extract",
+    "restore:components": "ts-node localization/component-extraction.ts restore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
