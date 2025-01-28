@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
 import LanguageSelector from './language-selector';
-import defaultContent from '../../localization/language-files/en/components/language-detection-provider.json';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,35 +7,7 @@ interface LayoutProps {
 }
 
 const LayoutWithLanguage: React.FC<LayoutProps> = ({ children, title = "My Website" }) => {
-  
-  
-
-  useEffect(() => {
-    const handleLanguageChange = async (event: any) => {
-      try {
-        const { language } = event.detail;
-        
-        if (language) {
-          try {
-            const langModule = await import(`../../localization/language-files/${language}/components/language-detection-provider.json`);
-            setContent(langModule.default.content);
-          } catch (error) {
-            console.error(`Failed to load language ${language}:`, error);
-            setContent(defaultContent.content);
-          }
-        }
-      } catch (error) {
-        console.error('Error loading content:', error);
-        setContent(defaultContent.content);
-      }
-    };
-
-    window.addEventListener('languageChange', handleLanguageChange);
-    return () => {
-      window.removeEventListener('languageChange', handleLanguageChange);
-    };
-  }, []);const [content, setContent] = useState(defaultContent.content);
-return (
+  return (
     <div>
       {/* Header with Language Selector */}
       <header style={{
@@ -78,7 +49,7 @@ return (
         color: '#666',
         fontSize: '14px'
       }}>
-        <p>{content.text_1}</p>
+        <p>© 2025 My Website. Language detection powered by browser preferences.</p>
       </footer>
     </div>
   );

@@ -1,36 +1,7 @@
-import React, { useState, useEffect } from "react";
-import defaultContent from '../../localization/language-files/en/components/hero.json';
+import React from 'react';
 
 const Hero: React.FC = () => {
-  
-  
-
-  useEffect(() => {
-    const handleLanguageChange = async (event: any) => {
-      try {
-        const { language } = event.detail;
-        
-        if (language) {
-          try {
-            const langModule = await import(`../../localization/language-files/${language}/components/hero.json`);
-            setContent(langModule.default.content);
-          } catch (error) {
-            console.error(`Failed to load language ${language}:`, error);
-            setContent(defaultContent.content);
-          }
-        }
-      } catch (error) {
-        console.error('Error loading content:', error);
-        setContent(defaultContent.content);
-      }
-    };
-
-    window.addEventListener('languageChange', handleLanguageChange);
-    return () => {
-      window.removeEventListener('languageChange', handleLanguageChange);
-    };
-  }, []);const [content, setContent] = useState(defaultContent.content);
-return (
+  return (
     <div style={{
       backgroundColor: '#f8f9fa',
       padding: '60px 20px',
@@ -43,7 +14,9 @@ return (
         color: '#333',
         marginBottom: '20px',
         fontWeight: 'bold'
-      }}>{content.text_1}</h1>
+      }}>
+        Welcome to Our Amazing Website
+      </h1>
       
       <p style={{
         fontSize: '1.2rem',
@@ -51,7 +24,10 @@ return (
         marginBottom: '30px',
         maxWidth: '600px',
         margin: '0 auto 30px'
-      }}>{content.text_2}</p>
+      }}>
+        Experience the power of automatic translation and multilingual content management. 
+        Switch between languages seamlessly and enjoy content in your preferred language.
+      </p>
       
       <div style={{
         display: 'flex',
@@ -68,7 +44,9 @@ return (
           fontSize: '1rem',
           cursor: 'pointer',
           fontWeight: '500'
-        }}>{content.text_3}</button>
+        }}>
+          Get Started
+        </button>
         
         <button style={{
           backgroundColor: 'transparent',
@@ -79,7 +57,9 @@ return (
           fontSize: '1rem',
           cursor: 'pointer',
           fontWeight: '500'
-        }}>{content.text_4}</button>
+        }}>
+          Learn More
+        </button>
       </div>
       
       <div style={{
@@ -89,8 +69,12 @@ return (
         borderRadius: '6px',
         display: 'inline-block'
       }}>
-        <h3 style={{ color: '#495057', marginBottom: '10px' }}>{content.text_5}</h3>
-        <p style={{ color: '#6c757d', margin: 0 }}>{content.text_6}</p>
+        <h3 style={{ color: '#495057', marginBottom: '10px' }}>
+          Quick Demo
+        </h3>
+        <p style={{ color: '#6c757d', margin: 0 }}>
+          Use the language selector above to see this content change instantly!
+        </p>
       </div>
     </div>
   );
