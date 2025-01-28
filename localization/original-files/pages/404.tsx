@@ -1,4 +1,3 @@
-import defaultContent from '../../localization/language-files/en/pages/404.json';
 import React, { useState, useEffect } from "react"
 import { Link, HeadFC, PageProps } from "gatsby"
 
@@ -25,35 +24,7 @@ const codeStyles = {
 }
 
 const NotFoundPage: React.FC<PageProps> = () => {
-  
-  
-
-  useEffect(() => {
-    const handleLanguageChange = async (event: any) => {
-      try {
-        const { language } = event.detail;
-        
-        if (language) {
-          try {
-            const langModule = await import(`../../localization/language-files/${language}/pages/404.json`);
-            setContent(langModule.default.content);
-          } catch (error) {
-            console.error(`Failed to load language ${language}:`, error);
-            setContent(defaultContent.content);
-          }
-        }
-      } catch (error) {
-        console.error('Error loading content:', error);
-        setContent(defaultContent.content);
-      }
-    };
-
-    window.addEventListener('languageChange', handleLanguageChange);
-    return () => {
-      window.removeEventListener('languageChange', handleLanguageChange);
-    };
-  }, []);const [content, setContent] = useState(defaultContent.content);
-return (
+  return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>{content.text_1}</h1>
       <p style={paragraphStyles}>

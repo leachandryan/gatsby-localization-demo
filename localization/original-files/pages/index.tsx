@@ -1,5 +1,4 @@
-import defaultContent from '../../localization/language-files/en/pages/index.json';
-import React, { useState, useEffect } from "react"
+import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import LanguageSelector from "../components/language-selector"
 import Hero from "../components/hero"
@@ -21,41 +20,13 @@ const headerStyles = {
 }
 
 const IndexPage: React.FC<PageProps> = () => {
-  
-  
-
-  useEffect(() => {
-    const handleLanguageChange = async (event: any) => {
-      try {
-        const { language } = event.detail;
-        
-        if (language) {
-          try {
-            const langModule = await import(`../../localization/language-files/${language}/pages/index.json`);
-            setContent(langModule.default.content);
-          } catch (error) {
-            console.error(`Failed to load language ${language}:`, error);
-            setContent(defaultContent.content);
-          }
-        }
-      } catch (error) {
-        console.error('Error loading content:', error);
-        setContent(defaultContent.content);
-      }
-    };
-
-    window.addEventListener('languageChange', handleLanguageChange);
-    return () => {
-      window.removeEventListener('languageChange', handleLanguageChange);
-    };
-  }, []);const [content, setContent] = useState(defaultContent.content);
-return (
+  return (
     <div style={pageStyles}>
       {/* Header with Language Selector */}
       <header style={headerStyles}>
         <div>
-          <h2 style={{ margin: 0, color: '#333' }}>{content.text_1}</h2>
-          <p style={{ margin: 0, color: '#666' }}>{content.text_2}</p>
+          <h2 style={{ margin: 0, color: '#333' }}>My Website</h2>
+          <p style={{ margin: 0, color: '#666' }}>Multilingual Demo</p>
         </div>
         <LanguageSelector />
       </header>
@@ -76,8 +47,13 @@ return (
             borderRadius: '8px',
             boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
           }}>
-            <h3 style={{ color: '#333', marginBottom: '15px' }}>{content.text_3}</h3>
-            <p style={{ color: '#666', lineHeight: '1.6' }}>{content.text_4}</p>
+            <h3 style={{ color: '#333', marginBottom: '15px' }}>
+              Automatic Translation
+            </h3>
+            <p style={{ color: '#666', lineHeight: '1.6' }}>
+              Our system automatically extracts text from your React components and pages, 
+              then translates them using Google Translate API for seamless multilingual support.
+            </p>
           </div>
           
           <div style={{
@@ -86,8 +62,13 @@ return (
             borderRadius: '8px',
             boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
           }}>
-            <h3 style={{ color: '#333', marginBottom: '15px' }}>{content.text_5}</h3>
-            <p style={{ color: '#666', lineHeight: '1.6' }}>{content.text_6}</p>
+            <h3 style={{ color: '#333', marginBottom: '15px' }}>
+              Easy Integration
+            </h3>
+            <p style={{ color: '#666', lineHeight: '1.6' }}>
+              Simply run our extraction commands to generate language files, 
+              then use the translation service to create multilingual versions of your content.
+            </p>
           </div>
           
           <div style={{
@@ -96,8 +77,13 @@ return (
             borderRadius: '8px',
             boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
           }}>
-            <h3 style={{ color: '#333', marginBottom: '15px' }}>{content.text_7}</h3>
-            <p style={{ color: '#666', lineHeight: '1.6' }}>{content.text_8}</p>
+            <h3 style={{ color: '#333', marginBottom: '15px' }}>
+              Dynamic Switching
+            </h3>
+            <p style={{ color: '#666', lineHeight: '1.6' }}>
+              Users can switch between languages instantly without page reloads. 
+              The system detects browser language preferences and remembers user choices.
+            </p>
           </div>
         </div>
         
@@ -107,8 +93,12 @@ return (
           borderRadius: '8px',
           textAlign: 'center'
         }}>
-          <h2 style={{ color: '#333', marginBottom: '20px' }}>{content.text_9}</h2>
-          <p style={{ color: '#666', marginBottom: '30px', fontSize: '1.1rem' }}>{content.text_10}</p>
+          <h2 style={{ color: '#333', marginBottom: '20px' }}>
+            Ready to Get Started?
+          </h2>
+          <p style={{ color: '#666', marginBottom: '30px', fontSize: '1.1rem' }}>
+            Extract your content and start translating today!
+          </p>
           
           <div style={{
             display: 'flex',
@@ -121,19 +111,25 @@ return (
               padding: '8px 12px',
               borderRadius: '4px',
               fontSize: '0.9rem'
-            }}>{content.text_11}</code>
+            }}>
+              npm run extract:pages
+            </code>
             <code style={{
               backgroundColor: '#e9ecef',
               padding: '8px 12px',
               borderRadius: '4px',
               fontSize: '0.9rem'
-            }}>{content.text_12}</code>
+            }}>
+              npm run extract:components
+            </code>
             <code style={{
               backgroundColor: '#e9ecef',
               padding: '8px 12px',
               borderRadius: '4px',
               fontSize: '0.9rem'
-            }}>{content.text_13}</code>
+            }}>
+              npm run translate
+            </code>
           </div>
         </div>
       </main>
@@ -145,8 +141,8 @@ return (
         textAlign: 'center',
         color: '#666'
       }}>
-        <p>{content.text_14}</p>
-        <p>{content.text_15}</p>
+        <p>Built with Gatsby and TypeScript</p>
+        <p>© 2025 Multilingual Website Demo</p>
       </footer>
     </div>
   )
