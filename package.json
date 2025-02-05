@@ -38,10 +38,13 @@
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.35",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.19.1",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
+    "jest": "^30.0.4",
     "prettier": "^2.8.8",
+    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
@@ -56,7 +59,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "translate": "ts-node localization/file-translation.ts files",
     "extract:pages": "ts-node localization/page-extraction.ts extract",
     "restore:pages": "ts-node localization/page-extraction.ts restore",
