@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import defaultContent from '../../localization/language-files/en/components/language-selector.json';
 
 interface Language {
   code: string;
@@ -15,7 +16,9 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   showPrompt = true,
   onLanguageChange 
 }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
+  
+  const [content, setContent] = useState(defaultContent.content);
+const [selectedLanguage, setSelectedLanguage] = useState('en');
   const [isOpen, setIsOpen] = useState(false);
 
   // Available languages - hardcoded for now
@@ -72,7 +75,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
       >
         <span style={{ fontSize: '18px' }}>{currentLang.flag}</span>
         <span>{currentLang.name}</span>
-        <span style={{ fontSize: '12px' }}>▼</span>
+        <span style={{ fontSize: '12px' }}>{content.text_1}</span>
       </button>
 
       {isOpen && (
@@ -110,7 +113,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
               <span style={{ fontSize: '18px' }}>{language.flag}</span>
               <span>{language.name}</span>
               {selectedLanguage === language.code && (
-                <span style={{ marginLeft: 'auto', color: '#007bff' }}>✓</span>
+                <span style={{ marginLeft: 'auto', color: '#007bff' }}>{content.text_2}</span>
               )}
             </button>
           ))}

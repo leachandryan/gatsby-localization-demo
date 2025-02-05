@@ -1,7 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import defaultContent from '../../localization/language-files/en/components/hero.json';
 
 const Hero: React.FC = () => {
-  return (
+  
+  
+
+  useEffect(() => {
+    const handleLanguageChange = async (event: any) => {
+      try {
+        const { language } = event.detail;
+        
+        if (language) {
+          try {
+            const langModule = await import(`../../localization/language-files/${language}/components/hero.json`);
+            setContent(langModule.default.content);
+          } catch (error) {
+            console.error(`Failed to load language ${language}:`, error);
+            setContent(defaultContent.content);
+          }
+        }
+      } catch (error) {
+        console.error('Error loading content:', error);
+        setContent(defaultContent.content);
+      }
+    };
+
+    window.addEventListener('languageChange', handleLanguageChange);
+    return () => {
+      window.removeEventListener('languageChange', handleLanguageChange);
+    };
+  }, []);const [content, setContent] = useState(defaultContent.content);
+return (
     <div style={{
       backgroundColor: '#f8f9fa',
       padding: '60px 20px',
@@ -14,9 +43,7 @@ const Hero: React.FC = () => {
         color: '#333',
         marginBottom: '20px',
         fontWeight: 'bold'
-      }}>
-        Welcome to Our Amazing Website
-      </h1>
+      }}>{content.text_1}</h1>
       
       <p style={{
         fontSize: '1.2rem',
@@ -24,10 +51,7 @@ const Hero: React.FC = () => {
         marginBottom: '30px',
         maxWidth: '600px',
         margin: '0 auto 30px'
-      }}>
-        Experience the power of automatic translation and multilingual content management. 
-        Switch between languages seamlessly and enjoy content in your preferred language.
-      </p>
+      }}>{content.text_2}</p>
       
       <div style={{
         display: 'flex',
@@ -44,9 +68,7 @@ const Hero: React.FC = () => {
           fontSize: '1rem',
           cursor: 'pointer',
           fontWeight: '500'
-        }}>
-          Get Started
-        </button>
+        }}>{content.text_3}</button>
         
         <button style={{
           backgroundColor: 'transparent',
@@ -57,9 +79,7 @@ const Hero: React.FC = () => {
           fontSize: '1rem',
           cursor: 'pointer',
           fontWeight: '500'
-        }}>
-          Learn More
-        </button>
+        }}>{content.text_4}</button>
       </div>
       
       <div style={{
@@ -69,12 +89,8 @@ const Hero: React.FC = () => {
         borderRadius: '6px',
         display: 'inline-block'
       }}>
-        <h3 style={{ color: '#495057', marginBottom: '10px' }}>
-          Quick Demo
-        </h3>
-        <p style={{ color: '#6c757d', margin: 0 }}>
-          Use the language selector above to see this content change instantly!
-        </p>
+        <h3 style={{ color: '#495057', marginBottom: '10px' }}>{content.text_5}</h3>
+        <p style={{ color: '#6c757d', margin: 0 }}>{content.text_6}</p>
       </div>
     </div>
   );
