@@ -119,6 +119,10 @@ const MyPage = () => {
    - Dynamic imports load translated content
    - UI updates instantly without page reloads
 
+4. **⚡ Restore Phase**
+   - Restore pages and componets back to original state to make addtional changes
+   - Changes can be made to components and extracted and translate again to update language files to any changes. 
+
 ### **File Structure After Extraction**
 
 ```
@@ -350,24 +354,6 @@ npm run extract:components
 
 Enable verbose logging by checking the console output during extraction. The system provides detailed feedback about what it's processing.
 
----
-
-## 🤝 Contributing
-
-We welcome contributions! This system is designed to be:
-
-- **Extensible**: Easy to add new features and language support
-- **Maintainable**: Clean TypeScript code with proper error handling
-- **Testable**: Modular design for easy unit testing
-
-### **Roadmap**
-
-- [ ] Pluralization support
-- [ ] Context-aware translations
-- [ ] Translation memory integration
-- [ ] Visual translation editor
-- [ ] Performance optimizations
-- [ ] More translation service providers
 
 ---
 
@@ -382,16 +368,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Google Translate API** for powerful translation capabilities
 - **Gatsby** for the amazing static site generation framework
 - **Cheerio** for reliable HTML/JSX parsing
-- **TypeScript** for making JavaScript development enjoyable
+- **TypeScript** typesafe for security and reliability  
 
 ---
 
 <div align="center">
 
-### **Made with ❤️ for the global web**
 
 *Transform your Gatsby site into a multilingual experience that reaches users worldwide.*
 
-[⭐ Star this repo](../../stargazers) | [🐛 Report issues](../../issues) | [💡 Request features](../../issues)
+
 
 </div>
