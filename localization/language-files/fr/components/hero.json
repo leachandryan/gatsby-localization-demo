@@ -1,0 +1,16 @@
+{
+  "title": "héros",
+  "componentPath": "src/components/hero.tsx",
+  "lastModified": "2025-06-19T23:34:16.734Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "Bienvenue sur notre incroyable site Web pour les tests !",
+    "text_2": "Découvrez la puissance de la traduction automatique et de la gestion de contenu multilingue. Passez d'une langue à l'autre en toute simplicité et profitez du contenu dans votre langue préférée.",
+    "text_3": "Commencer",
+    "text_4": "Apprendre encore plus",
+    "text_5": "Démo rapide",
+    "text_6": "Utilisez le sélecteur de langue ci-dessus pour voir ce contenu changer instantanément !"
+  }
+}

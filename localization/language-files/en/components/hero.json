@@ -1,0 +1,16 @@
+{
+  "title": "hero",
+  "componentPath": "src/components/hero.tsx",
+  "lastModified": "2025-06-19T23:34:16.734Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "Welcome to Our Amazing Website for testing!",
+    "text_2": "Experience the power of automatic translation and multilingual content management. \n        Switch between languages seamlessly and enjoy content in your preferred language.",
+    "text_3": "Get Started",
+    "text_4": "Learn More",
+    "text_5": "Quick Demo",
+    "text_6": "Use the language selector above to see this content change instantly!"
+  }
+}

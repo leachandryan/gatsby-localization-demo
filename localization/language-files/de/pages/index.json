@@ -1,0 +1,26 @@
+{
+  "title": "Index",
+  "pagePath": "src/pages/index.tsx",
+  "lastModified": "2025-06-19T23:34:01.957Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "Meine Website",
+    "text_2": "Mehrsprachige Demo",
+    "text_3": "Automatische Übersetzung",
+    "text_4": "Unser System extrahiert automatisch Text aus Ihren React-Komponenten und -Seiten und übersetzt ihn anschließend mithilfe der Google Translate API für nahtlose mehrsprachige Unterstützung.",
+    "text_5": "Einfache Integration",
+    "text_6": "Führen Sie einfach unsere Extraktionsbefehle aus, um Sprachdateien zu generieren, und nutzen Sie anschließend den Übersetzungsdienst, um mehrsprachige Versionen Ihrer Inhalte zu erstellen.",
+    "text_7": "Dynamisches Umschalten",
+    "text_8": "Nutzer können sofort zwischen Sprachen wechseln, ohne dass die Seite neu geladen werden muss.\nDas System erkennt die Spracheinstellungen des Browsers und merkt sich die Benutzerauswahl.",
+    "text_9": "Bereit loszulegen?",
+    "text_10": "Extrahieren Sie Ihren Inhalt und beginnen Sie noch heute mit der Übersetzung!",
+    "text_11": "npm run extract:pages",
+    "text_12": "npm-Ausführung extrahieren: Komponenten",
+    "text_13": "npm run translate",
+    "text_14": "Erstellt mit Gatsby und TypeScript",
+    "text_15": "© 2025 Mehrsprachige Website-Demo",
+    "text_16": "Startseite - Mehrsprachige Demo"
+  }
+}

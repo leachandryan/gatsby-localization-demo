@@ -1,0 +1,11 @@
+{
+  "title": "language-detection-provider",
+  "componentPath": "src/components/language-detection-provider.tsx",
+  "lastModified": "2025-06-19T23:34:16.736Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "© 2025 My Website. Language detection powered by browser preferences."
+  }
+}

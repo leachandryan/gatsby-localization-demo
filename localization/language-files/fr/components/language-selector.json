@@ -1,0 +1,12 @@
+{
+  "title": "sélecteur de langue",
+  "componentPath": "src/components/language-selector.tsx",
+  "lastModified": "2025-06-19T23:34:16.737Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "▼",
+    "text_2": "✓"
+  }
+}

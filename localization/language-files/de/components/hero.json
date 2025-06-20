@@ -1,0 +1,16 @@
+{
+  "title": "Held",
+  "componentPath": "src/components/hero.tsx",
+  "lastModified": "2025-06-19T23:34:16.734Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "Willkommen auf unserer fantastischen Website zum Testen! test",
+    "text_2": "Erleben Sie die Leistungsfähigkeit automatischer Übersetzung und mehrsprachiger Inhaltsverwaltung.\nWechseln Sie nahtlos zwischen Sprachen und genießen Sie Inhalte in Ihrer bevorzugten Sprache.",
+    "text_3": "Erste Schritte",
+    "text_4": "Mehr erfahren",
+    "text_5": "Schnelle Demo",
+    "text_6": "Verwenden Sie die Sprachauswahl oben, um die sofortige Änderung dieses Inhalts zu sehen!"
+  }
+}

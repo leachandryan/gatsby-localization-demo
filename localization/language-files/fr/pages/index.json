@@ -1,0 +1,26 @@
+{
+  "title": "indice",
+  "pagePath": "src/pages/index.tsx",
+  "lastModified": "2025-06-19T23:34:01.957Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "Mon site Web",
+    "text_2": "Démo multilingue",
+    "text_3": "Traduction automatique",
+    "text_4": "Notre système extrait automatiquement le texte de vos composants et pages React, puis les traduit à l'aide de l'API Google Translate pour une prise en charge multilingue transparente.",
+    "text_5": "Intégration facile",
+    "text_6": "Exécutez simplement nos commandes d'extraction pour générer des fichiers de langue, puis utilisez le service de traduction pour créer des versions multilingues de votre contenu.",
+    "text_7": "Commutation dynamique",
+    "text_8": "Les utilisateurs peuvent changer de langue instantanément sans recharger la page.\n\nLe système détecte les préférences linguistiques du navigateur et mémorise les choix de l'utilisateur.",
+    "text_9": "Prêt à commencer ?",
+    "text_10": "Extrayez votre contenu et commencez à traduire dès aujourd'hui !",
+    "text_11": "npm exécuter extraire:pages",
+    "text_12": "npm run extract:components",
+    "text_13": "npm exécuter traduire",
+    "text_14": "Construit avec Gatsby et TypeScript",
+    "text_15": "© 2025 Démo de site Web multilingue",
+    "text_16": "Accueil - Démo multilingue"
+  }
+}

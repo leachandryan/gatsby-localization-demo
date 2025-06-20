@@ -1,0 +1,11 @@
+{
+  "title": "fournisseur de détection de langue",
+  "componentPath": "src/components/language-detection-provider.tsx",
+  "lastModified": "2025-06-19T23:34:16.736Z",
+  "meta": {
+    "description": ""
+  },
+  "content": {
+    "text_1": "© 2025 Mon site Web. Détection de la langue optimisée par les préférences du navigateur."
+  }
+}
